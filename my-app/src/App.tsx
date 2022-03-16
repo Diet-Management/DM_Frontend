@@ -1,14 +1,14 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Cursor from './Cursor';
+import HomePage from './Page/Home/HomePage';
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Cursor/>}/>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </BrowserRouter>
   );
 }

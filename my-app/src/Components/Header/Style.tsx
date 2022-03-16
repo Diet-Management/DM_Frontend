@@ -29,7 +29,7 @@ export const HeaderMenuWrapper = styled.li`
     margin-bottom: auto;
 `
 
-export const LogoWrapper = styled.img`
+export const LogoImg = styled.img`
     margin-left: 50px;
     width: 50px;
 `

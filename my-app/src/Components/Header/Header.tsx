@@ -5,7 +5,7 @@ const Header: React.FC = () => {
 
     return (
         <S.HeaderWrapper>
-            <Link to="/"><S.LogoWrapper src={require("../../Assets/pig.png")} /></Link>
+            <Link to="/"><S.LogoImg src={require("../../Assets/pig.png")} /></Link>
 
             <S.HeaderMenuContainer>
                 <S.HeaderMenuWrapper>메뉴</S.HeaderMenuWrapper>

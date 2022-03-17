@@ -1,7 +1,7 @@
 import * as S from "./Style";
 import { Link } from "react-router-dom";
 
-const Header: React.FC = () => {
+const Header = () => {
 
     return (
         <S.HeaderWrapper>

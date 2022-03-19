@@ -6,7 +6,7 @@ export default function StartPage() {
         <S.BackgroundContainer>
             <S.LogoImg src={require("../../Assets/pig.png")}/>
 
-            <h1>Diet Management</h1>
+            <h1>DM</h1>
 
             <S.UserContainer>
                 <Link to="/login"><S.UserWrapper>로그인</S.UserWrapper></Link>

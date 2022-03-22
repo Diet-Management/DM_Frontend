@@ -33,7 +33,6 @@ export const Centent = styled.div`
     justify-content: space-around;
     align-items: center;
     border-bottom: 3px black solid;
-
     P {
       font-family: "LeeSeoyun";
       font-size: 1.1rem;

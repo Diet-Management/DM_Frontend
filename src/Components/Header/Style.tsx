@@ -1,35 +1,39 @@
 import styled from "styled-components";
 
-export const HeaderWrapper = styled.div`
-    top: 0;
-    width: 100vw;
-    height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 10;
-    
-`
+export const Header = styled.div`
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 10;
 
-export const HeaderMenuContainer = styled.ul`
-    position: absolute;
-    top: 0;
-    left: auto;
-    bottom: 0px;
-    right: 50px;
-    margin-right: 0;
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    overflow: hidden;
-    
-`
-
-export const HeaderMenuWrapper = styled.li`
-    margin-top: auto;
-    margin-bottom: auto;
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 export const LogoImg = styled.img`
-    margin-left: 50px;
-    width: 50px;
-`
+  margin-left: 5vw;
+  width: 50px;
+`;
+
+export const HeaderMenuContainer = styled.ul`
+  margin-right: 5vw;
+  padding: 0 5vw;
+
+  width: 40vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  list-style: none;
+  overflow: hidden;
+  background-color: #fffbde;
+
+  a {
+    cursor: pointer;
+    font-family: "LeeSeoyun";
+  }
+`;

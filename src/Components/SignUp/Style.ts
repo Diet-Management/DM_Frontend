@@ -5,6 +5,7 @@ export const BackgroundContainer = styled.div`
     height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #E9ECEF;
 `
 
 export const BackgroundWrapper = styled.div`
@@ -18,15 +19,16 @@ export const BackgroundWrapper = styled.div`
     align-items: center;
     border: 1px solid black;
     border-radius: 50px;
-    gap: 10px;
-    `
-    
-    export const UserWrapper = styled.div`
+    gap: 20px;
+    background-color: white;
+`
+
+export const UserWrapper = styled.div`
     width: 100%;
     height: 100px;
-    `
-    
-    export const UserInput = styled.input`
+`
+
+export const UserInput = styled.input`
     background-color: rgba(255, 230, 80, 0.15);
     width: 99%;
     height: 100%;
@@ -34,9 +36,26 @@ export const BackgroundWrapper = styled.div`
     padding: 0;
     padding-left: 1%;
     font-size: 20px;
+    text-align: center;
+`
+
+export const UserChoiceContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+`
+
+export const UserChoiceWrapper = styled.div`
+    width: auto;
+    display: flex;
+    flex-direction: column;
 `
 
 export const UserSumbit = styled.button`
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    height: 10%;
+    border: 1px solid rgb(255, 230, 80);
+    border-radius: 100px;
+    position: relative;
+    background-color: rgba(255, 230, 80, 0.15);
 `

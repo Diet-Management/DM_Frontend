@@ -41,8 +41,10 @@ export const UserInput = styled.input`
 
 export const UserChoiceContainer = styled.div`
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
 `
 
 export const UserChoiceWrapper = styled.div`

@@ -2,50 +2,74 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./Style";
 
+interface information {
+    email: string
+    name: string
+    PW: string
+    theme: string
+}
+
 export default function SignUp() {
 
-    const [inputs, setInputs] = useState({
+    const [inputs, setInputs] = useState<information>({
         email: "",
         name: "",
         PW: "",
+        theme: "",
     });
-    const { email, name, PW} = inputs;
+    const { email, name, PW, theme } = inputs;
 
-    const onChange = (e: any) => {
-        const { value, name } = e.target;
+    const onChange = ({ target }: any) => {
+        const { value, name } = target;
         setInputs({
             ...inputs,
             [name]: value
         });
+        console.log(target);
 
-        console.log(email, PW);
     };
 
     const onSumbit = () => {
-        axios.post('/v1/member/join', {
-            email: "ang@gmail.com",
-            name: "앙기모딱",
-            password: "1234",
-            theme: "LIGHT",
-        })
-            .then(({data}) => {
-                console.log(data);
+        const regExp_email = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+        if (!regExp_email.test(email)) {
+            alert("이메일 형식에 맞게 작성하세요");
+        } else if (name === "") {
+            alert("이름을 작성하세요");
+        } else if (PW === "" || PW.length < 8) {
+            alert("8자 이상의 비밀번호를 작성하세요");
+        } else if (theme === "") {
+            alert("선호하는 테마를 선택하세요");
+        } else {
+            axios.post('/v1/member/join', {
+                email: email,
+                name: name,
+                password: PW,
+                theme: theme,
             })
-            .catch((error) => {
-                console.log(error);
-            })
+                .then(({ data }) => {
+                    console.log(data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+
     }
+
 
     return (
         <S.BackgroundContainer>
             <S.BackgroundWrapper>
-                <S.UserWrapper><S.UserInput type="email" name="email" value={email} onChange={onChange} placeholder="이메일을 입력해주세요" /></S.UserWrapper>
-                <S.UserWrapper><S.UserInput type="text" name="email" value={email} onChange={onChange} placeholder="이름을 입력해주세요" /></S.UserWrapper>
-                <S.UserWrapper><S.UserInput type="password" name="PW" value={PW} onChange={onChange} placeholder="비밀번호를 입력해주세요" /></S.UserWrapper>
+                <S.UserWrapper><S.UserInput type="email" name="email" value={email} onChange={onChange} placeholder="email" /></S.UserWrapper>
+                <S.UserWrapper><S.UserInput type="text" name="name" value={name} onChange={onChange} placeholder="name" /></S.UserWrapper>
+                <S.UserWrapper><S.UserInput type="password" name="PW" value={PW} onChange={onChange} placeholder="password" /></S.UserWrapper>
 
                 <S.UserChoiceContainer>
-                    <S.UserChoiceWrapper>Light<input type="radio" /></S.UserChoiceWrapper>
-                    <S.UserChoiceWrapper>Dark<input type="radio" /></S.UserChoiceWrapper>
+                    <h5>Light</h5>
+                    <h5>Dark</h5>
+                    <input type="radio" name="radio" onClick={() => { setInputs({ ...inputs, theme: "LIGHT" }) }} />
+                    <input type="radio" name="radio" onClick={() => { setInputs({ ...inputs, theme: "BLACK" }) }} />
                 </S.UserChoiceContainer>
 
                 <S.UserSumbit onClick={onSumbit}>회원가입</S.UserSumbit>

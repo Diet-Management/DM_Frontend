@@ -12,7 +12,8 @@ export const NoticeBoard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fffbde;
+    // background-color: #fffbde;
+    border: 3px black solid;
   }
 
   width: 80%;
@@ -25,7 +26,6 @@ export const Centent = styled.div`
   height: 60vh;
   //   background-color: black;
   border: 3px black solid;
-  background-color: #fffbde;
 
   div {
     padding: 0.8rem 0;
@@ -52,11 +52,10 @@ export const AddNotice = styled.div`
     height: 100%;
     width: 20vw;
     font-size: 1.4rem;
-    background-color: #fffbde;
+    background-color: white;
     display: flex;
     justify-content: center;
+    border: 3px black solid;
     align-items: center;
-
-    border: none;
   }
 `;

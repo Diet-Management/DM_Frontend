@@ -5,6 +5,7 @@ import HomePage from "./Page/HomePage/HomePage";
 import StartPage from "./Page/StartPage/StartPage";
 import NoticePage from "./Page/NoticePage";
 import { GlobalStyle } from "./Style/GrobalStyle";
+import LoginPage from "./Page/LoginPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/notice" element={<NoticePage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );

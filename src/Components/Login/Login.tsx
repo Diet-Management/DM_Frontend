@@ -8,6 +8,9 @@ interface abc {
 }
 
 export default function Login() {
+  const [imgX, setImgX] = useState<number>(325);
+  const [imgY, setImgY] = useState<number>(190);
+
   const [inputs, setInputs] = useState<abc>({
     Email: "",
     PW: "",
@@ -45,8 +48,20 @@ export default function Login() {
       });
   };
 
+  const ChangeLogin = () => [];
+
   return (
-    <S.BackgroundContainer>
+    <S.BackgroundContainer
+      style={{ backgroundPosition: `top ${imgY}px left ${imgX}px` }}
+    >
+      <S.StartWrap>
+        <S.StartTItle>DM</S.StartTItle>
+        <S.StartLoginWarp>
+          <S.StartLogin onClick={ChangeLogin}>로그인</S.StartLogin>
+          <S.StartSignUp>회원가입</S.StartSignUp>
+        </S.StartLoginWarp>
+      </S.StartWrap>
+
       <S.BackgroundWrapper>
         <S.UserWrapper>
           <S.UserInput
@@ -54,7 +69,7 @@ export default function Login() {
             name="Email"
             value={Email}
             onChange={onChange}
-            placeholder="이메일을 입력해주세요"
+            placeholder="Id"
           />
         </S.UserWrapper>
         <S.UserWrapper>
@@ -63,11 +78,11 @@ export default function Login() {
             name="PW"
             value={PW}
             onChange={onChange}
-            placeholder="비밀번호를 입력해주세요"
+            placeholder="Password"
           />
         </S.UserWrapper>
-        <S.UserSumbit onClick={onSumbit}>로그인</S.UserSumbit>
-        아이디 찾기
+        <S.UserSumbit onClick={onSumbit}>Login</S.UserSumbit>
+        <S.GoIdPwFind>아이디 찾기/패스워드찾기</S.GoIdPwFind>
       </S.BackgroundWrapper>
     </S.BackgroundContainer>
   );

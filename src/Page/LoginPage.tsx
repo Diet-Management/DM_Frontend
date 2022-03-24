@@ -5,7 +5,6 @@ import Login from "../Components/Login/Login";
 const NoticePage = () => {
   return (
     <>
-      <Header />
       <Login />
     </>
   );

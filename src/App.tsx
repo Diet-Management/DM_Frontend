@@ -1,10 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalStyle } from "./Style/GrobalStyle";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Page/HomePage/HomePage";
 import StartPage from "./Page/StartPage/StartPage";
 import NoticePage from "./Page/NoticePage";
-import SignUp from "./Components/SignUp/SignUp";
-import LoginPage from "./Page/LoginPage";
+import LoginPage from "./Page/Login/LoginPage";
+import SignUpPage from "./Page/Signup/SignUpPage";
+
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Route path="/" element={<StartPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/notice" element={<NoticePage />} />
-        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+
       </Routes>
     </BrowserRouter>
   );

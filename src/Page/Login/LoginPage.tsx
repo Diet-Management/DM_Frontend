@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../Components/Header/Header";
-import Login from "../Components/Login/Login";
+import Header from "../../Components/Header/Header";
+import Login from "../../Components/Login/Login";
 
 const NoticePage = () => {
   return (

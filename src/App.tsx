@@ -6,6 +6,7 @@ import NoticePage from "./Page/NoticePage";
 import LoginPage from "./Page/Login/LoginPage";
 import SignUpPage from "./Page/Signup/SignUpPage";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/notice" element={<NoticePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+
       </Routes>
     </BrowserRouter>
   );

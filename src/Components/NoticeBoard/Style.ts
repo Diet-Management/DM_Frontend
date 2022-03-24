@@ -26,6 +26,7 @@ export const NoticeBoard = styled.div`
   flex-direction: column;
   // background-color: white;
 
+
   & > p {
     font-family: "LeeSeoyun";
     font-size: 1.4rem;
@@ -35,7 +36,6 @@ export const NoticeBoard = styled.div`
     justify-content: center;
     align-items: center;
     border: 3px black solid;
-  }
 
   width: 80%;
   height: 80vh;
@@ -46,6 +46,9 @@ export const Centent = styled.div`
   width: 80vw;
   height: 60vh;
   border: 3px black solid;
+  //   background-color: black;
+  border: 3px black solid;
+  background-color: #fffbde;
 
   div {
     padding: 0.8rem 0;
@@ -63,6 +66,7 @@ export const Centent = styled.div`
 export const AddNotice = styled.div`
   height: 7vh;
   width: 100%;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -72,10 +76,11 @@ export const AddNotice = styled.div`
     height: 100%;
     width: 20vw;
     font-size: 1.4rem;
-    background-color: white;
+    background-color: #fffbde;
     display: flex;
     justify-content: center;
-    border: 3px black solid;
     align-items: center;
+
+    border: none;
   }
 `;

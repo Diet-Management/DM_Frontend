@@ -49,6 +49,7 @@ export const UserChoiceContainer = styled.div`
     justify-items: center;
     margin-top: 10px;
 
+
 `
 
 export const UserSumbit = styled.button`

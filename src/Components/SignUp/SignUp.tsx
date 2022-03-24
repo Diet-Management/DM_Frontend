@@ -10,6 +10,13 @@ interface information {
     theme: string
 }
 
+interface information {
+    email: string
+    name: string
+    PW: string
+    theme: string
+}
+
 export default function SignUp() {
 
     const [inputs, setInputs] = useState<information>({
@@ -26,6 +33,7 @@ export default function SignUp() {
             ...inputs,
             [name]: value
         });
+        console.log(target);
 
     };
 

@@ -1,7 +1,6 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as S from "./Style";
-import apple from '../../Assets/apple.png'
 
 interface information {
     email: string
@@ -41,14 +40,14 @@ export default function SignUp() {
         } else if (theme === "") {
             alert("선호하는 테마를 선택하세요");
         } else {
-            axios.post('/v1/member/join', {
+            axios.post('http://13.124.121.122:8081/v1/member/join', {
                 email: email,
                 name: name,
                 password: PW,
                 theme: theme,
             })
-                .then(({ data }) => {
-                    console.log(data);
+                .then((response) => {
+                    console.log(response);
                 })
                 .catch((error) => {
                     console.log(error);

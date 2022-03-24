@@ -45,6 +45,5 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.24"
-  },
-  "proxy": "http://13.124.121.122:8081"
+  }
 }

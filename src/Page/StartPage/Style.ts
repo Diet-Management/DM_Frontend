@@ -28,13 +28,10 @@ export const UserContainer = styled.div`
 `
 
 export const flicker = keyframes`
-  10% {
-    color: white;
-  }
   50% {
-    color: black;
+    color: gray;
   }
-  85% {
+  100% {
     color: white;
   }
 `
@@ -44,6 +41,6 @@ export const UserWrapper = styled.h2`
     color: white;
 
     &:hover {
-        animation: ${flicker} 2s infinite;
+        animation: ${flicker} 1.5s infinite;
     }
 `

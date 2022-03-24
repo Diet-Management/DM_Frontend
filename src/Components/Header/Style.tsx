@@ -34,5 +34,6 @@ export const HeaderMenuContainer = styled.ul`
 
   a {
     cursor: pointer;
+    font-family: "LeeSeoyun";
   }
 `;

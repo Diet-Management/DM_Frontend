@@ -2,8 +2,13 @@ import axios from "axios";
 import { useState } from "react";
 import * as S from "./Style";
 
+interface abc {
+  Email: string;
+  PW: string;
+}
+
 export default function Login() {
-  const [inputs, setInputs] = useState({
+  const [inputs, setInputs] = useState<abc>({
     Email: "",
     PW: "",
   });
@@ -21,10 +26,17 @@ export default function Login() {
 
   const onSumbit = () => {
     axios
-      .post("http://10.53.68.195/v1/member/login", {
-        email: "test@gmail.com",
-        password: "1234",
-      })
+      .post(
+        "/v1/member/join",
+        {
+          email: "s21067@gsm.hskr",
+          password: "12345687",
+        },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      )
+
       .then(({ data }) => {
         if (data.msg === "성공하였습니다") console.log(data);
       })

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../Components/Header/Header";
 import Login from "../../Components/Login/Login";
 
-const NoticePage = () => {
+export default function NoticePage() {
   return (
     <>
       <Header />
@@ -11,4 +11,3 @@ const NoticePage = () => {
   );
 };
 
-export default NoticePage;

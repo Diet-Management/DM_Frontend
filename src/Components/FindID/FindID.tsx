@@ -27,7 +27,6 @@ export default function SignUp() {
             ...inputs,
             [name]: value
         });
-
     };
 
     const onSumbit = () => {

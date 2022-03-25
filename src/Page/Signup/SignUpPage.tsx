@@ -1,4 +1,4 @@
-import SignUp from "../../Components/SignUp/SignUp";
+import SignUp from "../../Components/FindID/FindID";
 
 export default function SignUpPage() {
     return( 

@@ -4,6 +4,8 @@ import HomePage from "./Page/HomePage/HomePage";
 import NoticePage from "./Page/NoticePage";
 import SignUpPage from "./Page/Signup/SignUpPage";
 import StartPage from "./Page/StartPage/StartPage";
+import ProfilePage from "./Page/ProfilePage/Profile";
+import LoginPage from "./Page/Login/LoginPage";
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
         <Route path="/notice" element={<NoticePage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -8,9 +8,6 @@ interface abc {
 }
 
 export default function Login() {
-  const [imgX, setImgX] = useState<number>(325);
-  const [imgY, setImgY] = useState<number>(190);
-
   const [inputs, setInputs] = useState<abc>({
     Email: "",
     PW: "",
@@ -51,17 +48,7 @@ export default function Login() {
   const ChangeLogin = () => [];
 
   return (
-    <S.BackgroundContainer
-      style={{ backgroundPosition: `top ${imgY}px left ${imgX}px` }}
-    >
-      <S.StartWrap>
-        <S.StartTItle>DM</S.StartTItle>
-        <S.StartLoginWarp>
-          <S.StartLogin onClick={ChangeLogin}>로그인</S.StartLogin>
-          <S.StartSignUp>회원가입</S.StartSignUp>
-        </S.StartLoginWarp>
-      </S.StartWrap>
-
+    <S.BackgroundContainer>
       <S.BackgroundWrapper>
         <S.UserWrapper>
           <S.UserInput

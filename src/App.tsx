@@ -4,13 +4,14 @@ import HomePage from "./Page/HomePage/HomePage";
 import NoticePage from "./Page/NoticePage";
 import SignUp from "./Components/SignUp/SignUp";
 import LoginPage from "./Page/LoginPage";
+import Start from "./Components/Start/Start";
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<Start />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/notice" element={<NoticePage />} />
         <Route path="/signup" element={<SignUp />} />

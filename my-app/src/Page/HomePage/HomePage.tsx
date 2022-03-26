@@ -1,9 +1,13 @@
 import Header from "../../Components/Header/Header";
+import NoticeBoard from "../../Components/NoticeBoard/NoticeBoard";
 
 const HomePage = () => {
-    return(
-            <Header/>
-    );
-}
+  return (
+    <>
+      <Header />
+      <NoticeBoard />
+    </>
+  );
+};
 
 export default HomePage;

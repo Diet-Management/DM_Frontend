@@ -17,7 +17,6 @@ export const BackgroundContainer = styled.div`
 `;
 
 export const BackgroundWrapper = styled.div`
-  opacity: 0;
   width: 35vw;
   min-width: 300px;
   height: 70vh;

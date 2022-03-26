@@ -45,8 +45,6 @@ export default function Login() {
       });
   };
 
-  const ChangeLogin = () => [];
-
   return (
     <S.BackgroundContainer>
       <S.BackgroundWrapper>

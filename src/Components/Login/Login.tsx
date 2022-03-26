@@ -2,8 +2,13 @@ import axios from "axios";
 import { useState } from "react";
 import * as S from "./Style";
 
+interface abc {
+  Email: string;
+  PW: string;
+}
+
 export default function Login() {
-  const [inputs, setInputs] = useState({
+  const [inputs, setInputs] = useState<abc>({
     Email: "",
     PW: "",
   });
@@ -21,10 +26,17 @@ export default function Login() {
 
   const onSumbit = () => {
     axios
-      .post("http://10.53.68.195/v1/member/login", {
-        email: "test@gmail.com",
-        password: "1234",
-      })
+      .post(
+        "/v1/member/join",
+        {
+          email: "s21067@gsm.hskr",
+          password: "12345687",
+        },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      )
+
       .then(({ data }) => {
         if (data.msg === "성공하였습니다") console.log(data);
       })
@@ -32,6 +44,8 @@ export default function Login() {
         console.log(error);
       });
   };
+
+  const ChangeLogin = () => [];
 
   return (
     <S.BackgroundContainer>
@@ -42,7 +56,7 @@ export default function Login() {
             name="Email"
             value={Email}
             onChange={onChange}
-            placeholder="이메일을 입력해주세요"
+            placeholder="Id"
           />
         </S.UserWrapper>
         <S.UserWrapper>
@@ -51,11 +65,11 @@ export default function Login() {
             name="PW"
             value={PW}
             onChange={onChange}
-            placeholder="비밀번호를 입력해주세요"
+            placeholder="Password"
           />
         </S.UserWrapper>
-        <S.UserSumbit onClick={onSumbit}>로그인</S.UserSumbit>
-        아이디 찾기
+        <S.UserSumbit onClick={onSumbit}>Login</S.UserSumbit>
+        <S.GoIdPwFind>아이디 찾기/패스워드찾기</S.GoIdPwFind>
       </S.BackgroundWrapper>
     </S.BackgroundContainer>
   );

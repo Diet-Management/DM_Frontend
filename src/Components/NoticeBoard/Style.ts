@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const NoticeBoard = styled.div`
   display: flex;
   flex-direction: column;
-
   & > p {
     font-family: "LeeSeoyun";
     font-size: 1.4rem;
@@ -15,7 +14,6 @@ export const NoticeBoard = styled.div`
     // background-color: #fffbde;
     border: 3px black solid;
   }
-
   width: 80%;
   height: 80vh;
   margin: 100px auto 0;
@@ -26,7 +24,6 @@ export const Centent = styled.div`
   height: 60vh;
   //   background-color: black;
   border: 3px black solid;
-
   div {
     padding: 0.8rem 0;
     display: flex;
@@ -46,7 +43,6 @@ export const AddNotice = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
   button {
     font-family: "LeeSeoyun";
     height: 100%;

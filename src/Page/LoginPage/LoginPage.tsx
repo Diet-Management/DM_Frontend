@@ -1,7 +1,7 @@
 import Header from "../../Components/Header/Header";
 import Login from "../../Components/Login/Login";
 
-export default function NoticePage() {
+export default function LoginPage() {
   return (
     <>
       <Header />

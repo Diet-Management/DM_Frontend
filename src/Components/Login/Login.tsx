@@ -25,10 +25,10 @@ export default function Login() {
         email: "test@gmail.com",
         password: "1234",
       })
-      .then(({ data }) => {
+      .then(({ data }:any) => {
         if (data.msg === "성공하였습니다") console.log(data);
       })
-      .catch((error) => {
+      .catch((error:any) => {
         console.log(error);
       });
   };

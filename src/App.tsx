@@ -1,23 +1,19 @@
-import { GlobalStyle } from "./Style/GrobalStyle";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./Page/HomePage/HomePage";
-import StartPage from "./Page/StartPage/StartPage";
+import { GlobalStyle } from "./Style/GrobalStyle";
 import NoticePage from "./Page/NoticePage";
-import ProfilePage from "./Page/ProfilePage/ProfilePage";
-import LoginPage from "./Page/LoginPage/LoginPage";
-import SignUpPage from "./Page/Signup/SignUpPage";
+import SignUp from "./Components/SignUp/SignUp";
+import LoginPage from "./Page/LoginPage";
+import Start from "./Components/Start/Start";
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
       <Routes>
-        <Route path="/" element={<StartPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<Start />} />
         <Route path="/notice" element={<NoticePage />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

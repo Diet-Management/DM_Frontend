@@ -42,7 +42,7 @@ export default function SignUp() {
         } else if (theme === "") {
             alert("선호하는 테마를 선택하세요");
         } else {
-            axios.post('http://13.124.121.122:8081/v1/member/join', {
+            axios.post('/v1/member/join', {
                 email: email,
                 name: name,
                 password: PW,
@@ -52,6 +52,7 @@ export default function SignUp() {
                     console.log(data);
                     navigate('/home');
                     window.location.reload();
+
                 })
                 .catch((error) => {
                     console.log(error);

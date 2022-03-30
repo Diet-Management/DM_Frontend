@@ -4,7 +4,11 @@ import * as S from "./Style";
 const NoticeBoard = () => {
   return (
     <>
+<<<<<<< HEAD
       {/* <S.BackgroundContainer> */}
+=======
+      <S.BackgroundContainer>
+>>>>>>> dd276d451ac64130809d8a2aa87cbd59835b4dc6
         <S.NoticeBoard>
           <p>게시판</p>
           <S.Centent>
@@ -19,8 +23,12 @@ const NoticeBoard = () => {
             <button>게시글 추가</button>
           </S.AddNotice>
         </S.NoticeBoard>
+<<<<<<< HEAD
       {/* </S.BackgroundContainer> */}
 
+=======
+      </S.BackgroundContainer>
+>>>>>>> dd276d451ac64130809d8a2aa87cbd59835b4dc6
     </>
   );
 };

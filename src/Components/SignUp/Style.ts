@@ -52,10 +52,10 @@ export const UserChoiceContainer = styled.div`
 `
 
 export const UserSumbit = styled.button`
-    width: 100%;
+    width: 30%;
     height: 10%;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 0;
+    border-radius: 100px;
     position: relative;
     background-color: #FFED48;
 `

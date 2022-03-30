@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import * as S from "./Style";
-import apple from '../../Assets/apple.png'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import * as S from "../SignUp/Style";
 
 interface information {
     email: string
@@ -12,6 +12,7 @@ interface information {
 
 export default function SignUp() {
 
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState<information>({
         email: "",
         name: "",
@@ -47,8 +48,11 @@ export default function SignUp() {
                 password: PW,
                 theme: theme,
             })
-                .then(({ data }) => {
+                .then(({data}) => {
                     console.log(data);
+                    navigate('/home');
+                    window.location.reload();
+
                 })
                 .catch((error) => {
                     console.log(error);

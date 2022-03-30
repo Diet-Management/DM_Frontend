@@ -1,7 +1,6 @@
-import React from "react";
 import Start from "../Components/Start/Start";
 
-const NoticePage = () => {
+const startpage = () => {
   return (
     <>
       <Start />
@@ -9,4 +8,4 @@ const NoticePage = () => {
   );
 };
 
-export default NoticePage;
+export default startpage;

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./Style";
+import apple from '../../Assets/apple.png'
 
 interface information {
     email: string
@@ -25,7 +26,6 @@ export default function SignUp() {
             ...inputs,
             [name]: value
         });
-        console.log(target);
 
     };
 

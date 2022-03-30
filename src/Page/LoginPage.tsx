@@ -1,12 +1,11 @@
 import React from "react";
 import Header from "../Components/Header/Header";
-import { WritePost } from "../Components/WritePost/Styled";
+import Login from "../Components/Login/Login";
 
 const NoticePage = () => {
   return (
     <>
-      <Header />
-      <WritePost />
+      <Login />
     </>
   );
 };

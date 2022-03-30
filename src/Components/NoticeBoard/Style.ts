@@ -1,8 +1,30 @@
 import styled from "styled-components";
+import apple from "../../Assets/apple.png";
+
+export const BackgroundContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(${apple});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 81.6vh;
+  z-index: -100;
+`;
+
+export const Backimg = styled.img`
+  position: absolute;
+  hidden: overflow;
+  height: 150%;
+
+  left: 25vw;
+  top: -1rem;
+`;
 
 export const NoticeBoard = styled.div`
   display: flex;
   flex-direction: column;
+  // background-color: white;
 
   & > p {
     font-family: "LeeSeoyun";
@@ -12,7 +34,7 @@ export const NoticeBoard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fffbde;
+    border: 3px black solid;
   }
 
   width: 80%;
@@ -23,9 +45,7 @@ export const NoticeBoard = styled.div`
 export const Centent = styled.div`
   width: 80vw;
   height: 60vh;
-  //   background-color: black;
   border: 3px black solid;
-  background-color: #fffbde;
 
   div {
     padding: 0.8rem 0;
@@ -42,7 +62,7 @@ export const Centent = styled.div`
 
 export const AddNotice = styled.div`
   height: 7vh;
-  width: 80vw;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -52,11 +72,10 @@ export const AddNotice = styled.div`
     height: 100%;
     width: 20vw;
     font-size: 1.4rem;
-    background-color: #fffbde;
+    background-color: white;
     display: flex;
     justify-content: center;
+    border: 3px black solid;
     align-items: center;
-
-    border: none;
   }
 `;

@@ -1,30 +1,39 @@
+import { url } from "inspector";
 import styled from "styled-components";
-import apple from "../../Assets/ProfilePageApple.png";
+
+type StyleProps = {
+    pictureUrl?: string;
+}
 
 export const ProfileLayout = styled.div`
     width: auto;
-    height: 50vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    gap: 3vw;
+    gap: 3vw;    
 `
 
-export const Container = styled.div`
-    width: 25vw;
-    height: 100%;
-    background-color: gray;
+export const Container = styled.div<StyleProps>`
+    width: 35vw;
+    height: 60vh;
+    background-color: white;
     overflow: hidden;
+    display: flex;
+    border: 1px solid black;
 `
+
+export const ProfilePicture = styled.img`
+    object-fit: contain;
+    width: 100%;
+`
+
 export const UserContainer = styled.ul`
     margin: 5%;
+    width: 100%;
 `
 
 export const UserWrapper = styled.li`
     margin: 5%;
-`
-
-export const ProfilePicture = styled.img`
-     object-fit: cover;
-     width: 90%;
-     height: 90%;
+    font-family: "LeeSeoyun";
+    font-size: 200%;
 `

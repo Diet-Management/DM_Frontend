@@ -12,3 +12,5 @@ export const ProfileLayout = styled.div`
     background-position: left bottom;
     background-size: 80vh;
 `
+
+//figure    

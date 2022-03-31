@@ -14,7 +14,7 @@ export const BackgroundContainer = styled.div`
 
 export const Backimg = styled.img`
   position: absolute;
-  hidden: overflow;
+  overflow: hidden;
   height: 150%;
 
   left: 25vw;
@@ -24,7 +24,6 @@ export const Backimg = styled.img`
 export const NoticeBoard = styled.div`
   display: flex;
   flex-direction: column;
-  // background-color: white;
 
   & > p {
     font-family: "LeeSeoyun";
@@ -46,7 +45,6 @@ export const Centent = styled.div`
   width: 80vw;
   height: 60vh;
   border: 3px black solid;
-
   div {
     padding: 0.8rem 0;
     display: flex;
@@ -66,7 +64,6 @@ export const AddNotice = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
   button {
     font-family: "LeeSeoyun";
     height: 100%;

@@ -24,8 +24,14 @@ export const Backimg = styled.img`
 export const NoticeBoard = styled.div`
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 691381a043f4ee9ed274c07e5e0a94ceb687cc04
   // background-color: white;
 
+>>>>>>> dd276d451ac64130809d8a2aa87cbd59835b4dc6
   & > p {
     font-family: "LeeSeoyun";
     font-size: 1.4rem;
@@ -36,7 +42,6 @@ export const NoticeBoard = styled.div`
     align-items: center;
     border: 3px black solid;
   }
-
   width: 80%;
   height: 80vh;
   margin: 100px auto 0;
@@ -46,7 +51,10 @@ export const Centent = styled.div`
   width: 80vw;
   height: 60vh;
   border: 3px black solid;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 691381a043f4ee9ed274c07e5e0a94ceb687cc04
   div {
     padding: 0.8rem 0;
     display: flex;
@@ -66,7 +74,6 @@ export const AddNotice = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
   button {
     font-family: "LeeSeoyun";
     height: 100%;

@@ -14,7 +14,7 @@ export const BackgroundContainer = styled.div`
 
 export const Backimg = styled.img`
   position: absolute;
-  hidden: overflow;
+  overflow: hidden;
   height: 150%;
 
   left: 25vw;
@@ -24,11 +24,7 @@ export const Backimg = styled.img`
 export const NoticeBoard = styled.div`
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-=======
-  // background-color: white;
 
->>>>>>> dd276d451ac64130809d8a2aa87cbd59835b4dc6
   & > p {
     font-family: "LeeSeoyun";
     font-size: 1.4rem;
@@ -39,6 +35,7 @@ export const NoticeBoard = styled.div`
     align-items: center;
     border: 3px black solid;
   }
+
   width: 80%;
   height: 80vh;
   margin: 100px auto 0;

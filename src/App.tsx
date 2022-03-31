@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GlobalStyle } from "./Style/GrobalStyle";
 import NoticePage from "./Page/NoticePage";
 import SignUp from "./Components/SignUp/SignUp";
-import LoginPage from "./Page/LoginPage";
+import LoginPage from "./Page/LoginPage/LoginPage";
 import Start from "./Components/Start/Start";
 
 function App() {

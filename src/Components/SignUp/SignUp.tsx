@@ -65,9 +65,9 @@ export default function SignUp() {
     return (
         <S.BackgroundContainer>
             <S.BackgroundWrapper>
-                <S.UserWrapper><S.UserInput type="email" name="email" value={email} onChange={onChange} placeholder="email" /></S.UserWrapper>
-                <S.UserWrapper><S.UserInput type="text" name="name" value={name} onChange={onChange} placeholder="name" /></S.UserWrapper>
-                <S.UserWrapper><S.UserInput type="password" name="PW" value={PW} onChange={onChange} placeholder="password" /></S.UserWrapper>
+                <S.UserWrapper><S.UserInput type="text" name="email" value={email} onChange={onChange} required/><S.PlaceHolder>email</S.PlaceHolder></S.UserWrapper>
+                <S.UserWrapper><S.UserInput type="text" name="name" value={name} onChange={onChange} required/><S.PlaceHolder>name</S.PlaceHolder></S.UserWrapper>
+                <S.UserWrapper><S.UserInput type="password" name="PW" value={PW} onChange={onChange} required/><S.PlaceHolder>password</S.PlaceHolder></S.UserWrapper>
 
                 <S.UserChoiceContainer>
                     <h5>Light</h5>

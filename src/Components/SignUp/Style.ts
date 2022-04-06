@@ -33,6 +33,7 @@ export const UserWrapper = styled.div`
     justify-content: center;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 `
 
 export const PlaceHolder = styled.label`
@@ -45,13 +46,10 @@ export const PlaceHolder = styled.label`
     transition: .5s;
 `
 export const UserInput = styled.input`
-    width: 100%;
+    width: calc(100% - 1px);
     height: 100px;
     border: none;
     border-bottom: 1px solid black;
-    /* border-top: none;
-    border-left: none;
-    border-right: none; */
     padding-top: 10%;
     font-size: 20px;
     text-align: center;
@@ -64,15 +62,13 @@ export const UserInput = styled.input`
     }
 `
 
-
-
 export const UserChoiceContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     margin-top: 10px;
-
+    overflow: hidden;
 `
 
 export const UserSumbit = styled.button`

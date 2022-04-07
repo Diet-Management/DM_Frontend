@@ -11,15 +11,15 @@ export const BackgroundContainer = styled.div`
     background-size: 81.6vh;
 `
 
-export const BackgroundWrapper = styled.form`
+export const BackgroundWrapper = styled.div`
     width: 35vw;
     min-width: 300px;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    /* gap: 20px; */
     top: 10vh;
     right: 10vw;
     margin-left:auto;
@@ -28,11 +28,12 @@ export const BackgroundWrapper = styled.form`
 
 export const UserWrapper = styled.div`
     width: calc(100%);
-    height: auto;
+    height: 20%;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 `
 
 export const PlaceHolder = styled.label`
@@ -46,13 +47,10 @@ export const PlaceHolder = styled.label`
 `
 export const UserInput = styled.input`
     width: 100%;
-    height: 100px;
+    height: 35%;
     border: none;
     border-bottom: 1px solid black;
-    /* border-top: none;
-    border-left: none;
-    border-right: none; */
-    padding-top: 10%;
+    padding: 8% 0 0 0;
     font-size: 20px;
     text-align: center;
 
@@ -64,15 +62,13 @@ export const UserInput = styled.input`
     }
 `
 
-
-
 export const UserChoiceContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     margin-top: 10px;
-
+    overflow: hidden;
 `
 
 export const UserSumbit = styled.button`

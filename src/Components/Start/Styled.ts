@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import apple from "../../Assets/apple.png";
+import apple from "../../Assets/StartPageApple.png";
 
 export const BackgroundContainer = styled.div`
   width: 100vw;
@@ -7,8 +7,8 @@ export const BackgroundContainer = styled.div`
 
   background-image: url(${apple});
   background-repeat: no-repeat;
-  background-position: top 190px left 405px;
-  background-size: 110vh;
+  background-position: bottom right;
+  background-size: 100vh;
   z-index: -100;
 `;
 

@@ -10,9 +10,9 @@ export const BackgroundContainer = styled.div`
 
   background-image: url(${apple});
   background-repeat: no-repeat;
-  background-position: top -30px right 425px;
+  background-position: top left;
   // background-position: top 190px left 325px;
-  background-size: 110vh;
+  background-size: 90vh;
   z-index: -100;
 `;
 

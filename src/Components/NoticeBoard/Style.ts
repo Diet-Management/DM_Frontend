@@ -1,20 +1,20 @@
 import styled from "styled-components";
-import apple from "../../Assets/apple.png";
+import apple2 from "../../Assets/noticeImg.png";
 
 export const BackgroundContainer = styled.div`
   width: 100vw;
   height: 100vh;
 
-  background-image: url(${apple});
+  background-image: url(${apple2});
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 81.6vh;
+  background-position: bottom;
+  background-size: 150vh;
   z-index: -100;
 `;
 
 export const Backimg = styled.img`
   position: absolute;
-  hidden: overflow;
+  overflow: hidden;
   height: 150%;
 
   left: 25vw;
@@ -24,11 +24,8 @@ export const Backimg = styled.img`
 export const NoticeBoard = styled.div`
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-=======
   // background-color: white;
 
->>>>>>> dd276d451ac64130809d8a2aa87cbd59835b4dc6
   & > p {
     font-family: "LeeSeoyun";
     font-size: 1.4rem;

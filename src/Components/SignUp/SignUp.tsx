@@ -74,7 +74,7 @@ export default function SignUp() {
                 <S.UserWrapper><S.UserInput type="text" name="email" value={email} onChange={onChange} onKeyDown={onSumbit} required /><S.PlaceHolder>email</S.PlaceHolder></S.UserWrapper>
                 <S.UserWrapper><S.UserInput type="text" name="name" value={name} onChange={onChange} onKeyDown={onSumbit} required /><S.PlaceHolder>name</S.PlaceHolder></S.UserWrapper>
                 <S.UserWrapper><S.UserInput type="password" name="pw" value={pw} onChange={onChange} onKeyDown={onSumbit} required /><S.PlaceHolder>password</S.PlaceHolder></S.UserWrapper>
-
+2
                 <S.UserChoiceContainer>
                     <h5>Light</h5>
                     <h5>Dark</h5>

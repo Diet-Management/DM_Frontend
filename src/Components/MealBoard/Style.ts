@@ -13,10 +13,20 @@ export const TitleBox = styled.div`
     width: calc(100% - 2px);
     height: 25%;
     border: 1px solid black;
-    `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
 
 export const MealBox = styled.div`
     width: calc(100% - 2px);
     height: 65%;
     border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+`
+
+export const MealWrapper = styled.div`
+    width: 20%;
+    height: 100%;
 `

@@ -24,9 +24,9 @@ export const MealBox = styled.div`
     border: 1px solid black;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 `
 
 export const MealWrapper = styled.div`
     width: 20%;
-    height: 100%;
 `

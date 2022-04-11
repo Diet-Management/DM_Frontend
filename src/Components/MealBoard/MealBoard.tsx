@@ -5,6 +5,7 @@ export default function RecommendMeal(children:any) {
         <S.Layout>
             <S.TitleBox>
                 <h1>오늘의 식단</h1>
+                <img src={require("../../Assets/MealBoardApple.png")}/>
             </S.TitleBox>
             <S.MealBox>
                 <S.MealWrapper>

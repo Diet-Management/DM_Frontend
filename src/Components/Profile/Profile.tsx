@@ -15,9 +15,10 @@ export default function Profile() {
     const [profile, setProfile] = useState<profiletype>();
 
     useEffect(() => {
-        axios.get('/v1/member/{memberIdx}')
+        axios.get('/v1/posting')
             .then(({ data }: any) => {
                 setProfile(data);
+                console.log(data);
             })
             .catch((error: any) => {
                 throw new Error(error);

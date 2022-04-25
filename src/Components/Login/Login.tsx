@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { API } from "../../Utils/Libs/defaultApi";
 import * as S from "./Style";
 
 interface abc {
@@ -25,15 +26,10 @@ export default function Login() {
   };
 
   const onSumbit = () => {
-    axios
-      .post(
-        "/v1/member/join",
+    API.post("/v1/member/login",
         {
-          email: "s21067@gsm.hskr",
-          password: "12345687",
-        },
-        {
-          headers: { "Content-Type": "application/json" },
+          email: Email,
+          password: PW,
         }
       )
 

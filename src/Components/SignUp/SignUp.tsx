@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API } from "../../Utils/Libs/defaultApi";
 import * as S from "../SignUp/Style";
 
 interface information {
@@ -47,7 +48,7 @@ export default function SignUp() {
             } else if (theme === "") {
                 alert("선호하는 테마를 선택하세요");
             } else {
-                axios.post('/v1/member/join', {
+                API.post('/v1/member/join', {
                     email: email,
                     name: name,
                     password: pw,
@@ -55,7 +56,7 @@ export default function SignUp() {
                 })
                     .then(({ data }) => {
                         console.log(data);
-                        navigate('/home');
+                        // navigate('/home');
                         // window.location.reload();
 
                     })

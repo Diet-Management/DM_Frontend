@@ -21,20 +21,21 @@ export default function Login() {
       ...inputs,
       [name]: value,
     });
-
-    console.log(Email, PW);
   };
 
   const onSumbit = () => {
     API.post("/v1/member/login",
-        {
-          email: Email,
-          password: PW,
-        }
-      )
+      {
+        email: Email,
+        password: PW,
+      }
+    )
 
       .then(({ data }) => {
-        if (data.msg === "성공하였습니다") console.log(data);
+        if (data.msg === "성공하였습니다") {
+          console.log(data.data.memberIdx);
+          localStorage.setItem('client', data.data.memberIdx);
+        }
       })
       .catch((error) => {
         console.log(error);

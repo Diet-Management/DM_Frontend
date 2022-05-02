@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { API } from "../../Utils/Libs/defaultApi";
 import * as S from "./Style";
 
 type profiletype = {
@@ -15,10 +16,10 @@ export default function Profile() {
     const [profile, setProfile] = useState<profiletype>();
 
     useEffect(() => {
-        axios.get('/v1/posting')
+        API.get('/v1/member/' + localStorage.getItem('client'))
             .then(({ data }: any) => {
-                setProfile(data);
-                console.log(data);
+                setProfile(data.data);
+                console.log(data.data);
             })
             .catch((error: any) => {
                 throw new Error(error);

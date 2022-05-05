@@ -33,8 +33,8 @@ export default function Login() {
 
       .then(({ data }) => {
         if (data.msg === "성공하였습니다") {
-          console.log(data.data.memberIdx);
-          localStorage.setItem('client', data.data.memberIdx);
+          localStorage.setItem('client', JSON.stringify(data.data));
+          console.log(JSON.parse(localStorage.getItem('client')));
         }
       })
       .catch((error) => {

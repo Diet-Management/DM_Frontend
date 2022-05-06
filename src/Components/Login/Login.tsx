@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { API } from "../../Utils/Libs/defaultApi";
 import * as S from "./Style";
 
 interface abc {
@@ -20,25 +21,21 @@ export default function Login() {
       ...inputs,
       [name]: value,
     });
-
-    console.log(Email, PW);
   };
 
   const onSumbit = () => {
-    axios
-      .post(
-        "/v1/member/join",
-        {
-          email: "s21067@gsm.hskr",
-          password: "12345687",
-        },
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      )
+    API.post("/v1/member/login",
+      {
+        email: Email,
+        password: PW,
+      }
+    )
 
       .then(({ data }) => {
-        if (data.msg === "성공하였습니다") console.log(data);
+        if (data.msg === "성공하였습니다") {
+          localStorage.setItem('client', JSON.stringify(data.data));
+          console.log(JSON.parse(localStorage.getItem('client')));
+        }
       })
       .catch((error) => {
         console.log(error);

@@ -14,13 +14,12 @@ export const BackgroundContainer = styled.div`
 export const BackgroundWrapper = styled.div`
     width: 35vw;
     min-width: 300px;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    background-color: white;
+    /* gap: 20px; */
     top: 10vh;
     right: 10vw;
     margin-left:auto;
@@ -28,18 +27,39 @@ export const BackgroundWrapper = styled.div`
 `
 
 export const UserWrapper = styled.div`
-    width: 100%;
-    height: auto;
+    width: calc(100%);
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 `
 
+export const PlaceHolder = styled.label`
+    position: absolute;
+    font-size: 20px;
+    color: #adadad;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+`
 export const UserInput = styled.input`
-    width: calc(100% - 2px);
-    height: 100px;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 0;
+    width: 100%;
+    height: 35%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 8% 0 0 0;
     font-size: 20px;
     text-align: center;
+
+    &:focus ~ ${PlaceHolder},
+    &:valid ~ ${PlaceHolder}{
+        transform: translateY(-150%);
+        color: #2691d9;
+        font-size: 16px;
+    }
 `
 
 export const UserChoiceContainer = styled.div`
@@ -48,7 +68,7 @@ export const UserChoiceContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     margin-top: 10px;
-
+    overflow: hidden;
 `
 
 export const UserSumbit = styled.button`

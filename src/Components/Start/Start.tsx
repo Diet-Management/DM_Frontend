@@ -12,11 +12,7 @@ export default function Start() {
             <S.StartLogin>
               <Link to="/login">로그인</Link>
             </S.StartLogin>
-            <S.StartSignUp>
-              <Link to="/signup">
-                회원가입
-              </Link>
-            </S.StartSignUp>
+            <S.StartSignUp>회원가입</S.StartSignUp>
           </S.StartLoginWarp>
         </S.Start>
       </S.BackgroundContainer>
